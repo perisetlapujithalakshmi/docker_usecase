@@ -2,10 +2,9 @@ FROM ubuntu
 
 WORKDIR /doc_usecase
 
-RUN apt update && \
-    apt install -y python3 python3-pip && \
-    pip3 install flask && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt update
+RUN apt install -y python3 python3-pip
+RUN apt install -y python3-flask
 
 COPY hello.py .
 
